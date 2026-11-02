@@ -24,7 +24,7 @@ tools {
 
         stage('Docker Build') {
             steps {
-                bat '"C:/Users/ghimi/AppData/Local/Programs/Docker/Docker/resources/bin/docker.exe" build -t devops-project .'
+                bat '"C:\Users\ghimi\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe
             }
         }
     }
