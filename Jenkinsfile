@@ -5,10 +5,11 @@ tools {
 }
     stages {
         stage('Checkout') {
-            steps {
-                echo 'Getting project from GitHub'
-            }
-        }
+    steps {
+        checkout scm
+        echo 'Project downloaded from GitHub'
+    }
+}
 
         stage('Build') {
             steps {
