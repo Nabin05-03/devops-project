@@ -22,11 +22,6 @@ tools {
             }
         }
 
-        stage('Docker Build') {
-            steps {
-                bat '"C:\Users\ghimi\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe
-            }
-        }
     }
 
     post {
