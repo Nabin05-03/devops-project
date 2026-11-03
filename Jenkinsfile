@@ -21,7 +21,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                bat 'docker build -t nabin0503/devops-project:latest .'
+                bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" build -t nabin0503/devops-project:latest .'
             }
         }
 
@@ -34,8 +34,8 @@ pipeline {
                 )]) {
                     bat '''
                         @echo off
-                        echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin
-                        docker push nabin0503/devops-project:latest
+                        echo %DOCKER_PASS% | "C:/Program Files/Docker/Docker/resources/bin/docker.exe" login -u %DOCKER_USER% --password-stdin
+                        "C:/Program Files/Docker/Docker/resources/bin/docker.exe" push nabin0503/devops-project:latest
                     '''
                 }
             }
