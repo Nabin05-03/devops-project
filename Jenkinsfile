@@ -36,7 +36,7 @@ pipeline {
                     bat '''
                         @echo off
                         echo %DOCKER_PASS% | "C:/Program Files/Docker/Docker/resources/bin/docker.exe" login -u %DOCKER_USER% --password-stdin
-                        "C:/Program Files/Docker/Docker/resources/bin/docker.exe" push nabin0503/devops-project:latest
+                        C:/Users/ghimi/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe
                     '''
                 }
             }
