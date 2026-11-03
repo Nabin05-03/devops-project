@@ -34,10 +34,11 @@ pipeline {
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
                     bat '''
-                        @echo off
-                        echo %DOCKER_PASS% | "C:/Program Files/Docker/Docker/resources/bin/docker.exe" login -u %DOCKER_USER% --password-stdin
-                        C:/Users/ghimi/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe
-                    '''
+    @echo off
+    echo %DOCKER_PASS% | "C:\\Users\\ghimi\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" login -u %DOCKER_USER% --password-stdin
+    "C:\\Users\\ghimi\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" push nabin0503/devops-project:latest
+'''
+                   
                 }
             }
         }
